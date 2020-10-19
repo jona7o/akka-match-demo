@@ -10,7 +10,7 @@ import scala.collection.immutable
 
 sealed trait HTTPResponse
 final case class IsPrimeResult(inputValue: Long, outputValue: Boolean) extends HTTPResponse
-final case class PowerResult(inpuValue: Long, outputValue: Long)       extends HTTPResponse
+final case class PowerResult(inputValue: Long, outputValue: Long)      extends HTTPResponse
 
 object MathActor {
   // actor protocol

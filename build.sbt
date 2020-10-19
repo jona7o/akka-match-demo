@@ -8,7 +8,7 @@ lazy val root = (project in file("."))
       List(
         organization := "de.innfactory.thro.akka.math",
         scalaVersion := "2.13.3",
-        version := "1.0.0"
+        version := "1.0.1"
       )
     ),
     name := "akka-math-demo",

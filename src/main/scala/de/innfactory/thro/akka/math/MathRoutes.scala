@@ -31,12 +31,16 @@ class MathRoutes(mathActor: ActorRef[MathActor.Command])(implicit val system: Ac
   val r                = scala.util.Random
 
   def isPrime(value: Long): Future[IsPrimeResult] = {
-    Thread.sleep(r.nextInt(sleepMax) * 1000)
+    val delay = r.nextInt(sleepMax) * 1000
+    println(s"isPrime function for $value will be executed with a delay of $delay ms.")
+    Thread.sleep(delay)
     mathActor.ask(IsPrime(value, _)).map(actorResult => IsPrimeResult(value, actorResult.value))
   }
 
   def power(value: Long): Future[PowerResult] = {
-    Thread.sleep(r.nextInt(sleepMax) * 1000)
+    val delay = r.nextInt(sleepMax) * 1000
+    println(s"power function for $value will be executed with a delay of $delay ms.")
+    Thread.sleep(delay)
     mathActor.ask(Power(value, _)).map(actorResult => PowerResult(value, actorResult.value))
   }
 
