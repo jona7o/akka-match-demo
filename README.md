@@ -8,4 +8,6 @@ This is a small akka-http demo project for Exercise 4 of Microservices Lecture a
 - Develop an "api gateway" which calls both services parallel and combine the responses if they arrive under 4s.
 - run `docker-compose down`
 
+If the images are removed vom gcr.io you have to build it yourself with ./bin/buildLocal.sh
+
 [Tobias Jonas - Microservices - TH Rosenheim](https://innFactory.de)
